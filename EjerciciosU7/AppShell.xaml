@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="EjerciciosU7.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:EjerciciosU7.Views"
+    xmlns:local="clr-namespace:EjerciciosU7"
+    Shell.FlyoutBehavior="Disabled"
+    Title="EjerciciosU7">
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="DC"
+             Icon="paw.png">
+            <ShellContent Title="Batman"
+                          Icon="batman.png"
+                          ContentTemplate="{DataTemplate views:Batman}" />
+            <ShellContent Title="Superman"
+                          Icon="superman.png"
+                          ContentTemplate="{DataTemplate views:Superman}" />
+        </Tab>
+        <!--
+        Shell has implicit conversion operators that enable the Shell visual hierarchy to be simplified.
+        This is possible because a subclassed Shell object can only ever contain a FlyoutItem object or a TabBar object,
+        which can only ever contain Tab objects, which can only ever contain ShellContent objects.
+
+        The implicit conversion automatically wraps the ShellContent objects below in Tab objects.
+        -->
+        <ShellContent Title="Spiderman"
+                      Icon="spiderman.png"
+                      ContentTemplate="{DataTemplate views:Spiderman}" />
+        <ShellContent Title="Hulk"
+                      Icon="hulk.png"
+                      ContentTemplate="{DataTemplate views:Hulk}" />
+    </FlyoutItem>
+
+</Shell>
