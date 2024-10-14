@@ -5,17 +5,35 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:EjerciciosU7.Views"
     xmlns:local="clr-namespace:EjerciciosU7"
-    Shell.FlyoutBehavior="Disabled"
+    Shell.FlyoutBehavior="Flyout"
     Title="EjerciciosU7">
 
-    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="Black"
+                  HeightRequest="150">
+                <Image Aspect="Fill"
+                       Source="heroes.jpg"
+                       Opacity="0.6" />
+                <Label Text="Super Héroes"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+        <FlyoutItem 
+        
+        FlyoutDisplayOptions="AsMultipleItems">
         <Tab Title="DC"
-             Icon="paw.png">
+             Icon="dc.png">
             <ShellContent Title="Batman"
-                          Icon="batman.png"
+                          Icon="dotnet_bot.png"
                           ContentTemplate="{DataTemplate views:Batman}" />
             <ShellContent Title="Superman"
-                          Icon="superman.png"
+                          Icon="dotnet_bot.png"
                           ContentTemplate="{DataTemplate views:Superman}" />
         </Tab>
         <!--
@@ -25,12 +43,24 @@
 
         The implicit conversion automatically wraps the ShellContent objects below in Tab objects.
         -->
-        <ShellContent Title="Spiderman"
-                      Icon="spiderman.png"
-                      ContentTemplate="{DataTemplate views:Spiderman}" />
-        <ShellContent Title="Hulk"
-                      Icon="hulk.png"
-                      ContentTemplate="{DataTemplate views:Hulk}" />
+        <Tab Title="Marvel"
+             Icon="marvel.png">
+            <ShellContent Title="Spiderman"
+              Icon="dotnet_bot.png"
+              ContentTemplate="{DataTemplate views:Spiderman}" />
+            <ShellContent Title="Hulk"
+              Icon="dotnet_bot.png"
+              ContentTemplate="{DataTemplate views:Hulk}" />
+        </Tab>
+
     </FlyoutItem>
+
+    <ShellContent Title="About"
+                  Icon="about.png"
+                  ContentTemplate="{DataTemplate views:About}" />
+
+    <ShellContent Title="Help"
+              Icon="help.png"
+              ContentTemplate="{DataTemplate views:Superman}" />
 
 </Shell>

@@ -57,10 +57,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\batman.png" />
-	  <None Remove="Resources\Images\hulk.png" />
-	  <None Remove="Resources\Images\spiderman.png" />
-	  <None Remove="Resources\Images\superman.png" />
+	  <None Remove="Resources\Images\about.png" />
+	  <None Remove="Resources\Images\dc.png" />
+	  <None Remove="Resources\Images\help.png" />
+	  <None Remove="Resources\Images\heroes.jpg" />
+	  <None Remove="Resources\Images\marvel.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -70,6 +71,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\About.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Batman.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
